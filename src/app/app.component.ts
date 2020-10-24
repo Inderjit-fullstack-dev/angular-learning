@@ -6,17 +6,24 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  isActive = true;
-  isRed = true;
+  // isActive = true;
+  // isRed = true;
+  // divClicked = () => console.log("div is clicked.");
+  // btnClicked = (event: any) => {
+  //   event.stopPropagation();
+  //   console.log("button is clicked.");
+  // };
+  // toggleColor = () => (this.isRed = !this.isRed);
+  // setColor = () => (this.isRed ? "red" : "blue");
 
-  divClicked = () => console.log("div is clicked.");
-  btnClicked = (event) => {
-    event.stopPropagation();
-    console.log("button is clicked.");
+  // Event Filtering
+  onKeyUp = (event: any) => {
+    if (event.keyCode === 13) {
+      console.log("send message");
+    }
   };
 
-  toggleColor = () => (this.isRed = !this.isRed);
-
-  // method for setting up the color.
-  setColor = () => (this.isRed ? "red" : "blue");
+  onEnterPressed = (event: any) => {
+    console.log(event.target.value);
+  };
 }

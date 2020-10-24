@@ -1,4 +1,4 @@
-<p [style.backgroundColor]="setColor()">It is called style binding.</p>
+<!-- <p [style.backgroundColor]="setColor()">It is called style binding.</p>
 <button
   class="btn btn-primary"
   [class.active]="isActive"
@@ -16,4 +16,7 @@
   <button class="btn btn-danger" (click)="btnClicked($event)">
     I am inside a div
   </button>
-</div>
+</div> -->
+
+<input type="text" (keyup)="onKeyUp($event)" /> <br />
+<input type="text" (keyup.enter)="onEnterPressed($event)" /> <br />
