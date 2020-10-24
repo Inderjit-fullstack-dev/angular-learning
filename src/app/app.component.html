@@ -1,0 +1,19 @@
+<p [style.backgroundColor]="setColor()">It is called style binding.</p>
+<button
+  class="btn btn-primary"
+  [class.active]="isActive"
+  (click)="toggleColor()"
+>
+  Click me
+</button>
+
+<div
+  style="border: 1px solid red; margin: 10px; padding: 10px; cursor: pointer"
+  (click)="divClicked()"
+>
+  This is a div having click event attached. <br />
+
+  <button class="btn btn-danger" (click)="btnClicked($event)">
+    I am inside a div
+  </button>
+</div>
